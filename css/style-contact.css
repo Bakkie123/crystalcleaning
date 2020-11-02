@@ -48,6 +48,10 @@ fieldset {
   width: 100%;
 }
 
+.g-recaptcha {
+  margin-top: -10px;
+}
+
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -88,6 +92,14 @@ fieldset {
   font-size: 15px;
   border-radius: 5px;
 }
+
+
+#contact button[type="submit"]:disabled,
+#contact button[type="submit"]:hover:disabled {
+  background: #cfd1d2;
+  cursor: default;
+}
+
 
 #contact button[type="submit"]:hover {
   background: #1e709c;

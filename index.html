@@ -20,6 +20,7 @@
     <meta property="og:image" content="">
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
@@ -223,7 +224,11 @@
             </div> 
           </div>
 
-
+          <script>
+            function recaptchaCallback() {
+              $('#contact-submit').removeAttr('disabled');
+            };
+          </script>
 
           <div class="contact-form">  
             <div class="container">
@@ -246,7 +251,10 @@
                   <textarea placeholder="Uw bericht" tabindex="5" required></textarea>
                 </fieldset>
                 <fieldset>
-                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Versturen</button>
+                  <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdBRt4ZAAAAAGxgoTz_ZeheHr522Yon2E0ZMIeh"></div>
+                </fieldset>
+                <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" disabled>Versturen</button>
                 </fieldset>
                 <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
               </form>
