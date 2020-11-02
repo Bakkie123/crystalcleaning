@@ -869,17 +869,17 @@ a:hover
   #page p {
     color: #cfdede;
     line-height: 1.2em;
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-align: justify;
     font-weight: 500;
   }
 
   #page .row:not(.reverse) :nth-child(2) article {
-    margin-top: 90px;
+    margin-top: 100px;
   }
 
   #page .row.reverse :nth-child(1) article {
-    margin-top: 50px;
+    margin-top: 70px;
   }
 
 
