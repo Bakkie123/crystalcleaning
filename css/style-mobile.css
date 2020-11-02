@@ -60,6 +60,7 @@ h3
 .button
 {
 	display: block;
+  padding: .5em .8em  .7em;
 }
 
 .button span
@@ -309,6 +310,7 @@ h3
 
   #featured-wrapper .button {
     margin: 20px 0px 10px;
+    padding: .5em .8em  .7em;
   }
 
   #featured-wrapper p {
