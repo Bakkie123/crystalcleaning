@@ -93,6 +93,20 @@ fieldset {
   border-radius: 5px;
 }
 
+.contact-feedback {
+  margin: 10px 0;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+.contact-feedback .error {
+  color: #f36363;
+}
+
+.contact-feedback .success {
+  color: #42923c;
+}
+
 
 #contact button[type="submit"]:disabled,
 #contact button[type="submit"]:hover:disabled {

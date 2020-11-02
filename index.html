@@ -224,35 +224,39 @@
             </div> 
           </div>
 
-          <script>
-            function recaptchaCallback() {
-              $('#contact-submit').removeAttr('disabled');
-            };
-          </script>
+
 
           <div class="contact-form">  
             <div class="container">
-              <form id="contact" action="/" method="post">
+              <form id="contact">
                 <h3>Contacteer ons</h3>
                 <br/>
                 <fieldset>
-                  <input placeholder="Uw naam" type="text" tabindex="1" required autofocus>
+                  <input 
+                    placeholder="Uw naam" type="text" tabindex="1" name="contact_name" autofocus required 
+                    oninvalid="this.setCustomValidity('Gelieve uw naam in te vullen')"
+                    oninput="this.setCustomValidity('')"/>
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Uw e-mail" type="email" tabindex="2" required>
+                  <input placeholder="Uw e-mail" name="contact_email" type="email" tabindex="2" required
+                    oninvalid="this.setCustomValidity('Gelieve uw e-mail in te vullen')"
+                    oninput="this.setCustomValidity('')"/>
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Uw telefoon" type="tel" tabindex="3" required>
+                  <input placeholder="Uw telefoon" name="contact_phone" type="tel" tabindex="3">
                 </fieldset>
                 <fieldset>
-                  <input placeholder="Uw adres" type="text" tabindex="4" required>
+                  <input placeholder="Uw adres" name="contact_address" type="text" tabindex="4">
                 </fieldset>
                 <fieldset>
-                  <textarea placeholder="Uw bericht" tabindex="5" required></textarea>
+                  <textarea placeholder="Uw bericht" name="contact_message" tabindex="5" required
+                    oninvalid="this.setCustomValidity('Gelieve uw bericht in te vullen')"
+                    oninput="this.setCustomValidity('')"></textarea>
                 </fieldset>
                 <fieldset>
                   <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdBRt4ZAAAAAGxgoTz_ZeheHr522Yon2E0ZMIeh"></div>
                 </fieldset>
+                <div class="contact-feedback"></div>
                 <fieldset>
                   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" disabled>Versturen</button>
                 </fieldset>
@@ -260,6 +264,38 @@
               </form>
             </div>
           </div>
+
+
+          <script>
+
+            function recaptchaCallback() { $('#contact-submit').removeAttr('disabled'); };
+
+            $('form#contact').on('submit', function(event){
+              event.preventDefault();
+              const form = $("form").serializeArray()
+              let data = {}
+              data[form[0].name] = form[0].value
+              data[form[1].name] = form[1].value
+              data[form[2].name] = form[2].value
+              data[form[3].name] = form[3].value
+              data[form[4].name] = form[4].value
+
+              if (! data.contact_name || ! data.contact_email || ! data.contact_message) {
+                $(".contact-feedback").html('<span class="error">gelieve alle velden correct in te vullen</span>');
+              } else {
+                $.ajax({
+                  url: 'contact.php',
+                  headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: data,
+                  error: function(error) {  $(".contact-feedback").html('<span class="success">Uw bericht werd succesvol verzonden. Wij hebben u een bevestiging mail gestuurd. Gelieve uw mailbox even te controleren.</span>'); }
+                });
+              }
+            }); 
+          </script>
 
           <div class="instagram">  
             <div class="container">
