@@ -68,10 +68,12 @@ a:hover
 
 	.button
 	{
+    margin-top: 10px;
+    width: 70%;
 		position: relative;
 		display: inline-block;
 		background: #40474a;
-		padding: 0.8em 2em;
+		padding: 0.6em 2em;
 		border-radius: 4px;
 		text-decoration: none;
 		font-size: 1.2em;
@@ -875,16 +877,18 @@ a:hover
   }
 
   #page .row:not(.reverse) :nth-child(2) article {
-    margin-top: 100px;
+    margin-top: 110px;
+    text-align: center;
   }
 
   #page .row.reverse :nth-child(1) article {
     margin-top: 70px;
+    text-align: center;
   }
-
 
   #page h2 {
     font-size: 2em;
+    padding-bottom: 10px;
   }
 
 /* Content */
@@ -953,11 +957,11 @@ a:hover
 	}
 
   #featured-wrapper .byline{
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-bottom: 1em;
     display: block;
     line-height: 1.3em;
-    font-weight: 700;
+    font-weight: 500;
   }
 
 	
