@@ -779,7 +779,7 @@ a:hover
 	header .byline
 	{
     display: block;
-    margin: 1.50em 0em;
+    margin: 1.70em 0em;
     line-height: 1.2em;
     font-weight: 500;
     color: rgb(255 255 255);
@@ -801,11 +801,16 @@ a:hover
     bottom: 0;
     margin: auto;
     padding: 0;
-    height: 340px;
+    height: 350px;
 		overflow: hidden;
 		z-index: 1;
 		text-align: center;
 	}
+
+  #banner .row>* {
+    padding-left: 20px;
+  }
+
 
 
   .container .row.double {
@@ -1034,7 +1039,7 @@ a:hover
   }
 
   .skill img {
-    border-radius: 30px;
+    border-radius: 15px;
     width: 100%;
   }
 
