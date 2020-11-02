@@ -75,6 +75,26 @@ fieldset {
   border: 1px solid #aaa;
 }
 
+#contact input[type="text"].invalid,
+#contact input[type="email"].invalid,
+#contact input[type="tel"].invalid,
+#contact input[type="url"].invalid,
+#contact textarea.invalid {
+  border: 1px solid red !important;
+}
+
+#contact input[type="text"]:valid:not(:placeholder-shown),
+#contact input[type="email"]:valid:not(:placeholder-shown),
+#contact input[type="tel"]:valid:not(:placeholder-shown),
+#contact input[type="url"]:valid:not(:placeholder-shown),
+#contact textarea:valid:not(:placeholder-shown) {
+  background: url(images/check.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  padding-left: 32px;
+}
+
 #contact textarea {
   height: 100px;
   max-width: 100%;

@@ -19,6 +19,9 @@
     <meta property="og:type" content="business.business">
     <meta property="og:image" content="">
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+     <link rel="preload" href="videos/crystalcleaninglogo_hd.mp4" as="video" type="video/mp4" crossorigin/>
+     <link rel="preload" href="css/images/check.png" as="image" media="(max-width: 20px)">
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script src="js/skel.min.js"></script>
@@ -234,13 +237,13 @@
                 <fieldset>
                   <input 
                     placeholder="Uw naam" type="text" tabindex="1" name="contact_name" autofocus required 
-                    oninvalid="this.setCustomValidity('Gelieve uw naam in te vullen')"
-                    oninput="this.setCustomValidity('')"/>
+                    oninvalid="this.setAttribute('class', 'invalid');this.setCustomValidity('Gelieve uw naam in te vullen')"
+                    oninput="this.setAttribute('class', '');this.setCustomValidity('')"/>
                 </fieldset>
                 <fieldset>
                   <input placeholder="Uw e-mail" name="contact_email" type="email" tabindex="2" required
-                    oninvalid="this.setCustomValidity('Gelieve uw e-mail in te vullen')"
-                    oninput="this.setCustomValidity('')"/>
+                    oninvalid="this.setAttribute('class', 'invalid');this.setCustomValidity('Gelieve uw e-mail in te vullen')"
+                    oninput="this.setAttribute('class', '');this.setCustomValidity('')"/>
                 </fieldset>
                 <fieldset>
                   <input placeholder="Uw telefoon" name="contact_phone" type="tel" tabindex="3">
@@ -250,8 +253,8 @@
                 </fieldset>
                 <fieldset>
                   <textarea placeholder="Uw bericht" name="contact_message" tabindex="5" required
-                    oninvalid="this.setCustomValidity('Gelieve uw bericht in te vullen')"
-                    oninput="this.setCustomValidity('')"></textarea>
+                    oninvalid="this.setAttribute('class', 'invalid');this.setCustomValidity('Gelieve uw bericht in te vullen')"
+                    oninput="this.setAttribute('class', '');this.setCustomValidity('')"></textarea>
                 </fieldset>
                 <fieldset>
                   <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LdBRt4ZAAAAAGxgoTz_ZeheHr522Yon2E0ZMIeh"></div>
