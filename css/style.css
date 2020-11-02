@@ -817,8 +817,8 @@ a:hover
   #featured-wrapper > :nth-child(2) .row.double > :nth-child(1),
   #featured-wrapper > :nth-child(2) .row.double > :nth-child(3),
   #featured-wrapper > :nth-child(3) .row.double > :nth-child(2) {
-    background: rgba(0, 0, 0, .03);
-    border-radius: 10px;
+    background: rgb(243 246 249 / .7);
+    border-radius: 5px;
   }
 
 
