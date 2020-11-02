@@ -715,7 +715,7 @@ a:hover
       font-size: 3em;
       color: #FFF;
       height: 200px;
-      width: 350px;
+      width: 100%;
       max-width: 100%;
 		}
 
@@ -811,7 +811,7 @@ a:hover
   }
 
   #featured-wrapper .row.double > * {
-    padding: 10px 30px 25px !important;
+    padding: 15px 30px 25px !important;
   }
 
   #featured-wrapper > :nth-child(2) .row.double > :nth-child(1),
