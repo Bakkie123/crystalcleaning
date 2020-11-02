@@ -87,7 +87,7 @@ fieldset {
 #contact input[type="email"]:valid:not(:placeholder-shown),
 #contact input[type="tel"]:valid:not(:placeholder-shown),
 #contact input[type="url"]:valid:not(:placeholder-shown),
-#contact textarea:valid:not(:placeholder-shown) {
+#contact textarea:valid:not(:placeholder-shown){
   background: url(images/check.png);
   background-size: 15px;
   background-repeat: no-repeat;
