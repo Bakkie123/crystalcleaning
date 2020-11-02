@@ -868,10 +868,10 @@ a:hover
 
   #page p {
     color: #cfdede;
-    line-height: 1.4em;
-    font-size: 1.1em;
+    line-height: 1.2em;
+    font-size: 1.4em;
     text-align: justify;
-    font-weight: 200;
+    font-weight: 500;
   }
 
   #page .row:not(.reverse) :nth-child(2) article {
@@ -879,7 +879,7 @@ a:hover
   }
 
   #page .row.reverse :nth-child(1) article {
-    margin-top: 60px;
+    margin-top: 50px;
   }
 
 
